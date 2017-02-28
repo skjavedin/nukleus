@@ -152,7 +152,10 @@ export default class Autocomplete extends React.Component {
     if (this.props.scrollTo && isMobile) {
       const elementPos = getElementPositionY(this.node, this.props.scrollOffset);
       const scroll = Scroll.animateScroll;
-      scroll.scrollTo(elementPos);
+
+      if (elementPos) {
+        scroll.scrollTo(elementPos);
+      }
     }
   }
 

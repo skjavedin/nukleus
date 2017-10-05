@@ -29,6 +29,9 @@
   ],
   "readme": "README.md",
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
     "autoprefixer": "7.1.2",
     "babel-cli": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -107,6 +110,8 @@
     "lint": "npm run eslint && npm run sasslint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }

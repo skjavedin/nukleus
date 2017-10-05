@@ -79,6 +79,9 @@
     "webpack-dev-server": "2.5.1"
   },
   "dependencies": {
+    "@storybook/addon-info": "^3.2.11",
+    "@storybook/addon-notes": "^3.2.10",
+    "@storybook/react": "^3.2.11",
     "classnames": "2.2.5",
     "debounce": "^1.0.2",
     "moment": "2.18.1",
@@ -107,6 +110,7 @@
     "lint": "npm run eslint && npm run sasslint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "storybook": "start-storybook -p 9001 - .storybook"
   }
 }

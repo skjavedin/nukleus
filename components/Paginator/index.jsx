@@ -66,6 +66,9 @@ export default class Paginator extends React.Component {
   }
 
   render () {
+    console.log('------ test ------');
+    console.log(this.props);
+
     const {
       baseLink,
       totalPages,

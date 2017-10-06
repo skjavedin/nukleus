@@ -8,7 +8,7 @@ import Paginator from '../components/Paginator';
 
 export default function PaginatorStories () {
   return storiesOf('Pagination', module)
-  .add('Types',
+  .add('Default',
     withInfo({})(() => (
       <div className="app-container container">
         <div className="panel">

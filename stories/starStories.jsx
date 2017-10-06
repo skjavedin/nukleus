@@ -31,5 +31,21 @@ export default function StarStories () {
         </div>
       </div>
     ))
+  )
+  .add('Not interactive',
+    withInfo({})(() => (
+      <div className="app-container container">
+        <div className="panel">
+          <div className="panel-body">
+            <div className="row">
+              <div className="col-xs-12 col-sm-5 col-md-4">
+                <Stars name="test" value={2.5} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
   );
 }
+

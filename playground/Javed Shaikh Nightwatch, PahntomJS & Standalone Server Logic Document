@@ -1,0 +1,47 @@
+I tried to get it as quickly as possible within span of 1 day. I learnt about how can I use the nightwatch.js along with the PhantomJS and standalone server.
+
+For your reference here is the logic which I used.
+
+I check the Nightwatch.json file from the "bin" folder of the Nightwatch and made the following changes to incorporate PhantomJS.
+I placed the PhantomJS file in the same folder as my nightwatchJS.
+
+"phantomjs" : {
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "./phantomjs.exe"
+        
+
+Then I added the server for the execution. I made start_process as true to make sure that the server execute at each run 
+and the path provided is of the same folder where the nightwacth exist.
+
+"selenium" : {
+    "start_process" : true,
+    "server_path" : "./Server/selenium standalone server.jar",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "",
+      "webdriver.ie.driver" : "",
+      "webdriver.firefox.profile" : ""
+      
+   Additonally I added the website for which the E2E needs to be taken place.
+   
+   "test_settings" : {
+    "default" : {
+      "launch_url" : "https://www.google.com/",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4444,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+        
+Combining these 3 things I have executed it using the command prompt.
+
+C:\Project>node nightwatch.js -e phantomjs
+
+It executed and shown the success message.
